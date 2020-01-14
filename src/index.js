@@ -15,7 +15,7 @@ const mathBlock = (code) => {
   return `<div>${tex}</div>`
 }
 
-const LatexPlugin = (md) => {
+module.exports = function (md) {
   // inline math
   const temp1 = md.renderer.rules.code_inline.bind(md.renderer.rules)
   md.renderer.rules.code_inline = (tokens, idx, options, env, slf) => {
@@ -49,5 +49,3 @@ const LatexPlugin = (md) => {
     return temp2(tokens, idx, options, env, slf)
   }
 }
-
-export default LatexPlugin
