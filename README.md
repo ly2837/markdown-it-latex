@@ -63,7 +63,7 @@ yarn release && npm publish
 
 ## Todo
 
-## diff with original
+## The difference from original
 
 - translate `=>` to function
 
