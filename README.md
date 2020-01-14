@@ -62,3 +62,11 @@ yarn release && npm publish
 
 
 ## Todo
+
+## diff with original
+
+- translate `=>` to function
+
+    because my nuxt app report `TypeError: plugin.apply is not a function`
+
+- update katex to 0.11.1
