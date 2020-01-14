@@ -39,10 +39,10 @@ module.exports = function (md) {
   md.renderer.rules.fence = (tokens, idx, options, env, slf) => {
     let token = tokens[idx]
     let code = token.content.trim()
-    if (token.info === 'math' || token.info === 'katex') { // math
+    if (token.info.trim() === 'math' || token.info.trim() === 'katex') { // math
       return mathBlock(code)
     }
-    if (/^ascii-?math/i.test(token.info)) {
+    if (/^ascii-?math/i.test(token.info.trim())) {
       code = code.split(/(?:\n\s*){2,}/).map((item) => { return asciimath2latex(item) }).join('\n\n')
       return mathBlock(code)
     }
